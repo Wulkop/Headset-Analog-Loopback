@@ -1,0 +1,2 @@
+KERNEL=="card1", SUBSYSTEM=="sound", ATTR{id}=="Gamin", ACTION=="add", RUN+="/bin/sh -c 'systemctl restart audioserver.target'"
+SUBSYSTEM=="sound", ENV{ID_VENDOR}=="Corsair", ACTION=="remove", RUN+="/bin/sh -c 'systemctl stop audioserver.target'"

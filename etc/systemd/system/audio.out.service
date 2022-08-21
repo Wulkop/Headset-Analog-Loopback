@@ -1,0 +1,18 @@
+[Unit]
+Description=JACK audio out
+Wants=jackd.service
+After=jackd.service
+PartOf=audioserver.target
+[Service]
+Environment="JACK_NO_AUDIO_RESERVATION=1"
+ExecStartPre=/bin/sleep 2
+ExecStart=alsa_out -dhw:Gamin,0 -r48000 -p32 -n6 -q0
+#ExecStart=/Jack2.sh
+WorkingDirectory=/usr/local/bin
+StandardOutput=inherit
+StandardError=inherit
+Restart=no
+User=root
+
+[Install]
+WantedBy=multi-user.target

@@ -1,0 +1,15 @@
+[Unit]
+Description=JACK audio
+After=network.target
+PartOf=audioserver.target
+[Service]
+Environment="JACK_NO_AUDIO_RESERVATION=1"
+ExecStart=taskset 1 /usr/bin/jackd -R -P 95 -dalsa -dhw:sndrpihifiberry -r48000 -p32 -n4 -s --hwmon --hwmeter
+WorkingDirectory=/usr/local/bin
+StandardOutput=inherit
+StandardError=inherit
+Restart=no
+User=root
+
+[Install]
+WantedBy=multi-user.target

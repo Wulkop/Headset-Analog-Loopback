@@ -1,0 +1,6 @@
+[Unit]
+Description=Audio Services
+Requires=jackd.service audio.in.service audio.out.service passthrough.service
+After=jackd.service audio.in.service audio.out.service passthrough.service
+[Install]
+WantedBy=multi-user.target
