@@ -13,6 +13,8 @@ Another problem occurs in the other direction, when the signal is generated from
 The scrips in this repository allows you to setup a digital-analog and vice versa translator based on the Raspberry Pi hardware. The general idea is presented in the following figure.
 The Pi takes the analog signal, processes and sends the digitized audio to the USB soundcard (dongle) of your headset. Vice versa it records the incoming audio stream form your headset (microphone) and passes the stream as an analog signal to an analog output.
 
+![Audio routing](https://github.com/Wulkop/Headset-Analog-Loopback/blob/master/AudioPath.png)
+
 ## Prerequisites
 ### Hardware
 * Raspberry Pi 3
