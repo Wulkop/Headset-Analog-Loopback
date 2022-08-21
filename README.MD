@@ -25,7 +25,7 @@ The Pi takes the analog signal, processes and sends the digitized audio to the U
 
 
 ## Install
-1. Copy the files in this repository onto your Pi. The root directory of this repository equals the root directory on the Pi (/)
+1. Copy the files in from the PI_ROOT folder in the root directory of your Pi (be careful!)
 2. Install the packages `jackd, alsa_in and alsa_out`
 3. Start Audioserver service: `sudo systemctl start audioserver.target`
 
